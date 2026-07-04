@@ -10,24 +10,24 @@ No USB dongle to plug in. No app to install. No cable in sight.
 
 ## Feature list
 
-- **Per-host targeting** — send keystrokes to one specific device, or
+- **Per-host targeting** : send keystrokes to one specific device, or
   broadcast to every subscribed host in one call.
-- **Ducky Script engine** — a real interpreter (not a lookup table) running
+- **Ducky Script engine** : a real interpreter (not a lookup table) running
   in its own FreeRTOS task, with an abort switch exposed on the dashboard (easily customizable).
-- **Macro library** — one-tap scripts for shutdown/restart, WiFi
+- **Macro library** : one-tap scripts for shutdown/restart, WiFi
   connect/toggle, and terminal launch, tuned per-OS (Windows / Linux paths
   differ enough that they need separate macros, so Dex BLE ships both).
-- **Persistent per-device labels** — labels are keyed by MAC address in NVS,
+- **Persistent per-device labels** : labels are keyed by MAC address in NVS,
   so "🎧 Music PC" survives reboots and reconnects automatically.
-- **MAC blocklist with timed bans** — kick a misbehaving or unwanted device
+- **MAC blocklist with timed bans** : kick a misbehaving or unwanted device
   and it can't reconnect until the ban expires.
-- **Zero-app control** — the ESP32 runs its own WiFi SoftAP + web server;
+- **Zero-app control** : the ESP32 runs its own WiFi SoftAP + web server;
   connect once, bookmark the dashboard, done.
 - **Supports Windows, macOS, Linux, and Android**
 - **Lightweight, portable, and easy to use**
 - **35 built-in macros**
 - **OS auto-detection**
-- **Live serial diagnostics** — heartbeat logging every 10s (host count,
+- **Live serial diagnostics** : heartbeat logging every 10s (host count,
   bond count, advertising state, free heap) for anyone debugging on the bench.
 
 
@@ -58,15 +58,12 @@ No USB dongle to plug in. No app to install. No cable in sight.
 
 
 ## Hardware
+Board - ESP32-S3 Dev Module 
+BLE stack - NimBLE-Arduino (h2zero) 
+Flash layout - Default 4MB with SPIFFS
+Connectivity - BLE (peripheral, HID) + WiFi (SoftAP) simultaneously 
 
-| Component | Spec |
-|---|---|
-| Board | ESP32-S3 Dev Module |
-| BLE stack | [NimBLE-Arduino] (h2zero) |
-| Flash layout | Default 4MB with SPIFFS |
-| Connectivity | BLE (peripheral, HID) + WiFi (SoftAP) simultaneously |
-
-An ESP32-S3 is required specifically — the BLE bonding/CCCD storage pools
+An ESP32-S3 is required specifically : the BLE bonding/CCCD storage pools
 are raised past their stock size at compile time to support 9 concurrent
 hosts, and that needs the extra RAM the S3 has over older ESP32 variants.
 
@@ -104,7 +101,7 @@ Join that network from your phone or laptop and open the portal URL.
 
 ### 3. Pair a device
 
-Dex BLE advertises over BLE as `ESP32-HID-KB` (renameable). Pair it from any
+Dex BLE advertises over BLE as `ESP32-HID-KB`. Pair it from any
 device's Bluetooth settings like you would any keyboard. Once it connects
 and subscribes, it shows up on the dashboard with an auto-detected label.
 
@@ -127,18 +124,16 @@ Target one connected host from the dropdown, or leave it on **ALL** to broadcast
 
 All logs are prefixed with a tag for easy filtering. Output appears on both USB CDC (`Serial`) and UART0 GPIO43 (`Serial0`).
 
-| Prefix | Section | What it logs |
-|---|---|---|
-| `[CFG]` | Config | NVS load/save events, values |
-| `[SYS]` | System | Boot events, reboot |
-| `[BLE]` | BLE stack | Connect, disconnect, auth, CCCD, advertising |
-| `[HOSTS]` | Host registry | Add/remove/subscribe events |
-| `[OSDET]` | OS detection | MTU readings, label assignment, retry |
-| `[BLOCK]` | Blocklist | Block/unblock events, expiry |
-| `[LABEL]` | Labels | NVS label save events |
-| `[SCRIPT]` | Script engine | Task start/stop, per-line execution |
-| `[WEB]` | Web API | Endpoint calls, parameters |
-| `[HEARTBEAT]` | Loop | Every 10s: uptime, hosts, bonds, advertising, heap |
+`[CFG]` - Config - NVS load/save events, values 
+`[SYS]` - System - Boot events, reboot 
+`[BLE]` - BLE stack - Connect, disconnect, auth, CCCD, advertising 
+`[HOSTS]` - Host registry - Add/remove/subscribe events 
+`[OSDET]` - OS detection - MTU readings, label assignment, retry 
+`[BLOCK]` - Blocklist - Block/unblock events, expiry 
+`[LABEL]` - Labels - NVS label save events
+`[SCRIPT]` - Script engine - Task start/stop, per-line execution 
+`[WEB]` - Web API - Endpoint calls, parameters 
+`[HEARTBEAT]` - Loop - Every 10s: uptime, hosts, bonds, advertising, heap 
 
 
 ### Filtering examples (Arduino Serial Monitor search bar)
