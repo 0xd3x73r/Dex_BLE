@@ -74,10 +74,10 @@ hosts, and that needs the extra RAM the S3 has over older ESP32 variants.
 
 ## Getting started
 
-### 1. Flash it
+### 1. Flash it with Arduino IDE
 
 ```bash
-# Install ESP32 board support
+Install ESP32 board support
 # Arduino IDE → Preferences → Additional Board URLs
 # Paste following url and enter : https://espressif.github.io/arduino-esp32/package_esp32_index.json
 # Tools → Board → Boards Manager → Install ESP32
