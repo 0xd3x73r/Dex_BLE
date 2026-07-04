@@ -75,17 +75,25 @@ hosts, and that needs the extra RAM the S3 has over older ESP32 variants.
 ## Getting started
 
 ### 1. Flash it with Arduino IDE
-
-```bash
 Install ESP32 board support
-# Arduino IDE → Preferences → Additional Board URLs
-# Paste following url and enter : https://espressif.github.io/arduino-esp32/package_esp32_index.json
-# Tools → Board → Boards Manager → Install ESP32
-# Arduino IDE: Board = "ESP32S3 Dev Module", Partition Scheme = "Default 4MB with spiffs", USB CDC On Boot = Enable (critical for Serial Monitor logs), Upload Speed : 921600
-# Required Lybraries: NimBLE-Arduino library (by h2zero), Arduino ESP32 by Espressif
-# Open the .ino, select your port, hit Upload
-# Open Serial Monitor: Tools → Serial Monitor (or Ctrl+Shift+M) and set baud rate as 115200 to see the serial logs
+- Arduino IDE → Preferences → Additional Board URLs
+- Paste following url and enter : https://espressif.github.io/arduino-esp32/package_esp32_index.json
+- Tools → Board → Boards Manager → Install ESP32
+```bash
+Arduino IDE: Board = "ESP32S3 Dev Module"
+Partition Scheme = "Default 4MB with spiffs"
+USB CDC On Boot = Enable (critical for Serial Monitor logs)
+Upload Speed : 921600
 ```
+**Required Lybraries** 
+- NimBLE-Arduino library (by h2zero)
+- Arduino ESP32 by Espressif
+
+Open the .ino in Arduino IDE
+select your COM port and hit Upload
+
+**Open Serial Monitor**
+Tools → Serial Monitor (or Ctrl+Shift+M) and set baud rate as 115200 to see the serial logs
 
 ### 2. Connect to the dashboard
 
@@ -124,17 +132,18 @@ Target one connected host from the dropdown, or leave it on **ALL** to broadcast
 
 All logs are prefixed with a tag for easy filtering. Output appears on both USB CDC (`Serial`) and UART0 GPIO43 (`Serial0`).
 
-`[CFG]` - Config - NVS load/save events, values 
-`[SYS]` - System - Boot events, reboot 
-`[BLE]` - BLE stack - Connect, disconnect, auth, CCCD, advertising 
-`[HOSTS]` - Host registry - Add/remove/subscribe events 
-`[OSDET]` - OS detection - MTU readings, label assignment, retry 
-`[BLOCK]` - Blocklist - Block/unblock events, expiry 
-`[LABEL]` - Labels - NVS label save events
-`[SCRIPT]` - Script engine - Task start/stop, per-line execution 
-`[WEB]` - Web API - Endpoint calls, parameters 
-`[HEARTBEAT]` - Loop - Every 10s: uptime, hosts, bonds, advertising, heap 
-
+| Prefix | Section | What it logs |
+|---|---|---|
+| `[CFG]` | Config | NVS load/save events, values |
+| `[SYS]` | System | Boot events, reboot |
+| `[BLE]` | BLE stack | Connect, disconnect, auth, CCCD, advertising |
+| `[HOSTS]` | Host registry | Add/remove/subscribe events |
+| `[OSDET]` | OS detection | MTU readings, label assignment, retry |
+| `[BLOCK]` | Blocklist | Block/unblock events, expiry |
+| `[LABEL]` | Labels | NVS label save events |
+| `[SCRIPT]` | Script engine | Task start/stop, per-line execution |
+| `[WEB]` | Web API | Endpoint calls, parameters |
+| `[HEARTBEAT]` | Loop | Every 10s: uptime, hosts, bonds, advertising, heap |
 
 ### Filtering examples (Arduino Serial Monitor search bar)
 ```
@@ -153,7 +162,7 @@ mtu=        ← only MTU-related logs
 ### Diagnostics
 | Macro | Action |
 |---|---|
-| ⌨ Test: Type Text | Types "BLE HID working!" — use to verify the connection |
+| ⌨ Test: Type Text | Types "BLE HID working!" - use to verify the connection |
 | 🔬 Test: Ctrl+A | Sends Ctrl+A — tests modifier key handling |
 
 ### System (Windows)
@@ -176,14 +185,14 @@ mtu=        ← only MTU-related logs
 ### WiFi (Windows)
 | Macro | Variables | Action |
 |---|---|---|
-| 📶 WiFi On (Win) | — | Opens `ms-settings:network-wifi` |
+| 📶 WiFi On (Win) | - | Opens `ms-settings:network-wifi` |
 | 🌐 WiFi Connect (Win) | `{{WIFI_SSID}}` | `netsh wlan connect name="SSID"` via CMD |
 | 📡 WiFi Add+Connect (Win) | `{{WIFI_SSID}}` | PowerShell profile add + connect |
 
 ### WiFi (Linux)
 | Macro | Variables | Action |
 |---|---|---|
-| 📶 WiFi On (Linux) | — | `nmcli radio wifi on` |
+| 📶 WiFi On (Linux) | - | `nmcli radio wifi on` |
 | 🌐 WiFi Connect (Linux) | `{{WIFI_SSID}}`, `{{WIFI_PASS}}` | `nmcli dev wifi connect "SSID" password "PASS"` |
 
 ### Applications
