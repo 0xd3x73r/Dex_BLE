@@ -58,10 +58,10 @@ No USB dongle to plug in. No app to install. No cable in sight.
 
 
 ## Hardware
-Board - ESP32-S3 Dev Module 
-BLE stack - NimBLE-Arduino (h2zero) 
-Flash layout - Default 4MB with SPIFFS
-Connectivity - BLE (peripheral, HID) + WiFi (SoftAP) simultaneously 
+- Board : ESP32-S3 Dev Module 
+- BLE stack : NimBLE-Arduino (h2zero) 
+- Flash layout : Default 4MB with SPIFFS
+- Connectivity : BLE (peripheral, HID) + WiFi (SoftAP) simultaneously 
 
 An ESP32-S3 is required specifically : the BLE bonding/CCCD storage pools
 are raised past their stock size at compile time to support 9 concurrent
