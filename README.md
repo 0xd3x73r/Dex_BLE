@@ -37,14 +37,14 @@ No USB dongle to plug in. No app to install. No cable in sight.
 ┌─────────────────────────────────────────────────────────────────┐
 │                        ESP32-S3 Board                           │
 │                                                                 │
-│  ┌──────────────┐    ┌──────────────────────────────────────┐  │
-│  │  WiFi SoftAP │    │        NimBLE BLE Peripheral         │  │
-│  │ 192.168.4.1  │    │  Advertises as HID Keyboard          │  │
-│  │              │    │  Up to 9 concurrent connections       │  │
-│  │  WebServer   │    │  CCCD subscription tracking          │  │
-│  │  REST API    │    │  Per-device HID notify (unicast)     │  │
-│  │  Ducky Script│    │  OS fingerprint via MTU + addr type  │  │
-│  └──────┬───────┘    └────────────┬─────────────────────────┘  │
+│  ┌──────────────┐    ┌──────────────────────────────────────┐   │
+│  │  WiFi SoftAP │    │        NimBLE BLE Peripheral         │   │
+│  │ 192.168.4.1  │    │  Advertises as HID Keyboard          │   │
+│  │              │    │  Up to 9 concurrent connections      │   │
+│  │  WebServer   │    │  Per-device HID notify (unicast)     │   │
+│  │  REST API    │    │  OS fingerprint via MTU + addr type  │   │
+│  │  Ducky Script│    │                                      │   │
+│  └──────┬───────┘    └────────────┬─────────────────────────┘   │
 │         │                         │                             │
 │         │ HTTP                    │ BLE RF                      │
 └─────────┼─────────────────────────┼─────────────────────────────┘
