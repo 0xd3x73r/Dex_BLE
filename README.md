@@ -103,8 +103,8 @@ select your COM port and hit Upload
 On boot, Dex BLE starts a WiFi access point:
 
 ```
-SSID:     ESP32-HID-Hub      (configurable)
-Password: hidcentral1        (change this — see Settings)
+SSID:     Dex_BLE      (configurable)
+Password: dex_ble_ducky        (change this — see Settings)
 Portal:   http://192.168.4.1/
 ```
 
@@ -112,7 +112,7 @@ Join that network from your phone or laptop and open the portal URL.
 
 ### 3. Pair a device
 
-Dex BLE advertises over BLE as `ESP32-HID-KB`. Pair it from any
+Dex BLE advertises over BLE as `Dex_BLE`. Pair it from any
 device's Bluetooth settings like you would any keyboard. Once it connects
 and subscribes, it shows up on the dashboard with an auto-detected label.
 
