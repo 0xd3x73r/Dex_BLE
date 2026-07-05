@@ -33,7 +33,7 @@ No USB dongle to plug in. No app to install. No cable in sight.
   bond count, advertising state, free heap) for anyone debugging on the bench.
 
 
-## How It Works — Architecture Overview
+## How It Works - Architecture Overview
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
