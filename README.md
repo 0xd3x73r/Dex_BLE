@@ -160,7 +160,7 @@ mtu=        ← only MTU-related logs
 
 ## Built-in Macro Library
 
-35 macros organized by category. Load any macro by clicking its button in the portal — it populates the editor for review/edit before running.
+35 macros organized by category. Load any macro by clicking its button in the portal - it populates the editor for review/edit before running.
 
 ### Diagnostics
 | Macro | Action |
