@@ -52,9 +52,9 @@ No USB dongle to plug in. No app to install. No cable in sight.
 └─────────┼─────────────────────────┼─────────────────────────────┘
           │                         │
     ┌─────▼──────┐         ┌────────▼───────────────────────┐
-    │  Browser   │         │  BLE Clients (HID Hosts)        │
-    │ (phone/PC) │         │  Windows PC  Android  iOS/Mac   │
-    │ Portal UI  │         │  Linux       (any BLE device)   │
+    │  Browser   │         │  BLE Clients (HID Hosts)       │
+    │ (phone/PC) │         │  Windows PC  Android  iOS/Mac  │
+    │ Portal UI  │         │  Linux       (any BLE device)  │
     └────────────┘         └────────────────────────────────┘
 ```
 
