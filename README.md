@@ -225,6 +225,14 @@ mtu=        ← only MTU-related logs
 | 📸 Snipping Tool | Win+Shift+S |
 | 🔁 Alt+Tab | Alt+Tab |
 
+---
+
+Demo
+
+
+https://github.com/user-attachments/assets/cc7f2036-7402-4a38-b112-bea4608315bb
+
+
 
 ## Ducky script examples
 Visit Hak5 Ducky Script quick reference to learn ducky script.
