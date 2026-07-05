@@ -229,37 +229,3 @@ mtu=        ← only MTU-related logs
 ## Ducky script examples
 Visit Hak5 Ducky Script quick reference to learn ducky script.
 https://documentation.hak5.org/hak5-usb-rubber-ducky/duckyscript-tm-quick-reference
-
-Open CMD as Administrator Mode
-```
-WAIT 1000
-GUI R
-WAIT 1000
-TYPE cmd
-WAIT 1000
-CTRL SHIFT ENTER
-WAIT 1300
-ALT Y
-```
-
-Create A New Folder
-```
-WAIT 1000
-CTRL SHIFT N
-WAIT 1200
-TYPE hello
-WAIT 1100
-ENTER
-```
-
-Open notepad and type Hello World!
-```
-WAIT 1000
-GUI R
-WAIT 1000
-TYPE notepad
-WAIT 1000
-ENTER
-WAIT 1000
-TYPE Hello World!
-```
