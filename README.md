@@ -2,9 +2,11 @@
 Dex BLE a offensive security HID injection tool built on the ESP32 platform. It emulates a Bluetooth keyboard to silently inject keystrokes into a paired device.
 
 
-Dex BLE turns a $6 microcontroller into a wireless HID injection tool for RedTeamers or professional ethical hackers.
+Dex BLE turns a ₹500 - ₹999 microcontroller into a wireless HID injection tool for RedTeamers or professional ethical hackers.
 
 No USB dongle to plug in. No app to install. No cable in sight.
+
+> ⚠️ Disclaimer: This project is for educational and authorized testing purposes only. Unauthorized use may violate laws. Use responsibly.
 
 ---
 
