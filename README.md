@@ -10,7 +10,7 @@ No USB dongle to plug in. No app to install. No cable in sight.
 
 ---
 
-## Feature list
+## Features
 
 - **Per-host targeting** : send keystrokes to one specific device, or
   broadcast to every subscribed host in one call.
