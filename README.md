@@ -95,6 +95,7 @@ Open the .ino in Arduino IDE
 select your COM port and hit Upload
 
 **Open Serial Monitor**
+
 Tools → Serial Monitor (or Ctrl+Shift+M) and set baud rate as 115200 to see the serial logs
 
 ### 2. Connect to the dashboard
