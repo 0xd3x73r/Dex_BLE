@@ -228,4 +228,5 @@ mtu=        ← only MTU-related logs
 
 ## Ducky script examples
 Visit Hak5 Ducky Script quick reference to learn ducky script.
+
 https://documentation.hak5.org/hak5-usb-rubber-ducky/duckyscript-tm-quick-reference
